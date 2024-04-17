@@ -9,9 +9,9 @@ import { UserModel } from '../../models/user-model';
 })
 export class GetallComponent {
   products!: UserModel[];
-
+  
   constructor(private CrudService: CrudServiceService) {}
-
+  
   ngOnInit() {
       this.CrudService.getAll().subscribe({
         next:(data)=>{
