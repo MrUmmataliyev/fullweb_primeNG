@@ -1,1 +1,50 @@
-<p>update works!</p>
+@if(!isUpdated){
+    <div class="card flex justify-content-center">
+        <br>
+        <br>
+        <p-button label="FindUser" icon="pi pi-check" (click)="getById()" iconPos="right"></p-button>
+
+        <br>
+        <br>
+        <span class="p-float-label">
+            <input pInputText id="id" placeholder="enter ID" [(ngModel)]="myId" name="myId" />
+            <label for="id">Id</label>
+        </span>
+        <br>
+        <br>
+        <span class="p-float-label">
+            <input pInputText id="name" placeholder="enter name" value="{{user.fullName}}" [(ngModel)]="setValue.fullName" name="name" />
+            <label for="username">Username</label>
+        </span>
+        <br>
+        <br>
+        <span class="p-float-label">
+            <input pInputText id="email" aria-describedby="emailHelp" placeholder="Enter email" value="{{user.email}}" [(ngModel)]="setValue.email" name="email"/>
+            <label for="email">Email</label>
+        </span>
+        <br>
+        <br>
+        <span class="p-float-label">
+            <input pInputText id="login" id="login" placeholder="enter login" required value="{{setValue.login}}" [(ngModel)]="setValue.login" name="login" />
+            <label for="login">Login</label>
+        </span>
+        <br>
+        <br>
+        <span class="p-float-label">
+            <input type="password" pInputText id="password" placeholder="Password" required value="{{setValue.password}}" [(ngModel)]="setValue.password" name="password" />
+            <label for="password">Password</label>
+        </span>
+        <br>
+        <br>
+        <span class="p-float-label">
+            <input pInputText id="role" placeholder="enter role" required value="{{user.role}}" [(ngModel)]="setValue.role" name="role" />
+            <label for="role">Role</label>
+        </span>
+        <br>
+    </div>
+    <p-button label="Submit" icon="pi pi-check" (click)="setUser()" iconPos="right"></p-button>
+    
+}
+@else{
+    <h1>Malumotlar yangilandi</h1>
+}

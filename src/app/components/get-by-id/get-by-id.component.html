@@ -1,1 +1,12 @@
-<p>get-by-id works!</p>
+<br>
+<br>
+<span class="p-float-label">
+    <input pInputText id="id" placeholder="enter ID" [(ngModel)]="myId" name="myId" />
+    <label for="id">Id</label>
+</span>
+<p-button label="Find User" (click)="getByid()" ></p-button>
+
+<h1>Id: {{user.userId}}</h1>
+<h1>FullName: {{user.fullName}}</h1>
+<h1>Email: {{user.email}}</h1>
+<h1>Role: {{user.role}}</h1>

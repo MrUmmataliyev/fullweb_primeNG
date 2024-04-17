@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { UserModel } from '../../models/user-model';
 import { CreateUser } from '../../models/create-user';
 import { CrudServiceService, Message } from '../../services/crud-service.service';
@@ -8,7 +8,7 @@ import { CrudServiceService, Message } from '../../services/crud-service.service
   templateUrl: './update.component.html',
   styleUrl: './update.component.scss'
 })
-export class UpdateComponent {
+export class UpdateComponent implements OnInit{
   myId!:number;
   isUpdated:boolean=false;
   user:UserModel={
@@ -24,11 +24,13 @@ export class UpdateComponent {
   setValue: CreateUser={
     fullName:"",
     email:"",
-    login:"64554545454456",
+    login:"64456",
     password:"4565464545654654dfsa",
     role:""
   };
   constructor(private crud:CrudServiceService){}
+  ngOnInit(): void {
+  }
   getById(){
     this.crud.getbyid(this.myId).subscribe({
       next: (data)=> {
@@ -42,9 +44,9 @@ export class UpdateComponent {
   
   setUser(){
     this.crud.update(this.myId, this.setValue).subscribe({
-      next: (data)=>{
+      next:(data)=>{
         this.message=data;
-        this.isUpdated=true;
+        this.isUpdated=true
       }
     })
   }

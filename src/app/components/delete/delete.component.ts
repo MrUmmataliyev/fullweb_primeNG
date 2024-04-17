@@ -14,8 +14,8 @@ export class DeleteComponent {
   }
   constructor(private crud:CrudServiceService){}
 
-  delete(){
-    this.crud.delete(this.myId).subscribe({
+  deletes(myId:number){
+    this.crud.delete(myId).subscribe({
       next:(data)=>{
         this.mes=data;
         this.isDeleted=true;
@@ -24,5 +24,8 @@ export class DeleteComponent {
         console.log(err);
       }
     })
+  }
+  delete(){
+    this.deletes(this.myId);
   }
 }
