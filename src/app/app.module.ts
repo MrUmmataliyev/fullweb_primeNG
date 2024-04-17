@@ -15,12 +15,18 @@ import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { InputTextModule } from 'primeng/inputtext';
 import { CardModule } from 'primeng/card';
+import { GetByIdComponent } from './components/get-by-id/get-by-id.component';
+import { UpdateComponent } from './components/update/update.component';
+import { DeleteComponent } from './components/delete/delete.component';
 @NgModule({
   declarations: [
     AppComponent,
     GetallComponent,
     NavbarComponent,
-    CreateComponent
+    CreateComponent,
+    GetByIdComponent,
+    UpdateComponent,
+    DeleteComponent
   ],
   imports: [
     BrowserModule,

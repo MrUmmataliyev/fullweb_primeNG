@@ -22,4 +22,5 @@ export class CrudServiceService {
   create(data:CreateUser): Observable<Message>{
     return this.http.post<Message>(this.baseUrl+'CreateUser', data)
   }
+  
 }
