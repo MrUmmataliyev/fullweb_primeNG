@@ -7,3 +7,6 @@
 ![image](https://github.com/MrUmmataliyev/fullweb_primeNG/assets/145908814/37a34722-b57a-418d-9cc8-9930713061a1)
 ![image](https://github.com/MrUmmataliyev/fullweb_primeNG/assets/145908814/70dcb00f-4535-47af-be70-93f9d0aed186)
 ![image](https://github.com/MrUmmataliyev/fullweb_primeNG/assets/145908814/c560b540-e639-4418-a05e-4436dd0ac1e1)
+
+<h1>Leetcode HM</h1>
+https://github.com/MrUmmataliyev/LeetCodeUi
